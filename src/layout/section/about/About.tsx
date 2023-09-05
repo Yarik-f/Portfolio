@@ -7,12 +7,11 @@ export const About = () => {
             <AboutTitle>About me</AboutTitle>
             <AboutDescription>
                 <AboutText>
-                    Hi, I'm Denis – UX/UI designer from Minsk.
+                    Hi, I'm Yaroslav – Frontend Developer from Minsk.
                     I'm interested in design and everything connected with it.
                 </AboutText>
                 <AboutText>
-                    I'm studying at courses "Web and mobile design
-                    interfaces" in IT-Academy.
+                    I'm studying at courses "Frontend Developer" in IT-Incubator.
                 </AboutText>
                 <AboutText>
                     Ready to implement excellent projects

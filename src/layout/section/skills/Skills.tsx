@@ -12,9 +12,8 @@ export const Skills = () => {
             <SkillsList>
                 <SkillsItem>
                     <Skill
-                        iconId={'photoshop'}
-                        title={'Adobe\n' +
-                            'Photoshop'}/>
+                        iconId={'react'}
+                        title={'ReactJS'}/>
                     <StarList>
                         <Star iconId={'star'}/>
                         <Star iconId={'star'}/>
@@ -25,9 +24,8 @@ export const Skills = () => {
                 </SkillsItem>
                 <SkillsItem>
                     <Skill
-                        iconId={'illustrator'}
-                        title={'Adobe \n' +
-                            'Illustrator'}/>
+                        iconId={'typescript'}
+                        title={'TypeScript'}/>
                     <StarList>
                         <Star iconId={'star'}/>
                         <Star iconId={'star'}/>
@@ -38,9 +36,8 @@ export const Skills = () => {
                 </SkillsItem>
                 <SkillsItem>
                     <Skill
-                        iconId={'effects'}
-                        title={'Adobe \n' +
-                            'After Effects'}/>
+                        iconId={'js'}
+                        title={'JavaScript'}/>
                     <StarList>
                         <Star iconId={'star'}/>
                         <Star iconId={'star'}/>
@@ -52,11 +49,7 @@ export const Skills = () => {
                 <SkillsItem>
                     <Skill
                         iconId={'figma'}
-                        width={'60'}
-                        height={'90'}
-                        viewBox={'0 0 60 90'}
-                        title={'Figma'}
-                        max={'60px'}/>
+                        title={'Figma'}/>
                     <StarList>
                         <Star iconId={'star'}/>
                         <Star iconId={'star'}/>
@@ -91,6 +84,7 @@ const SkillsList = styled.ul`
 const SkillsItem = styled.ul`
   display: flex;
   flex-direction: column;
+  align-items: center;
 `
 const StarList = styled.ul`
   display: flex;

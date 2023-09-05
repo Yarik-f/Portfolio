@@ -31,20 +31,17 @@ export const Skill = (props: SkillPropsType) => {
 };
 const StyledSkill = styled.li`
   min-width: 170px;
-  
-  div{
-    margin-left: 30px;
-  }
+  display: flex;
+  flex-direction: column;
+ align-items: center;
 
 `
 const SkillTitle = styled.p<Title>`
   max-width: ${props => props.max || '90px'};
-  min-height: 40px;
   font-size: 12px;
   text-align: center;
   font-weight: bold;
   color: ${theme.colors.fontText};
   margin-top: 15px;
   margin-bottom: 15px;
-  margin-left: 30px;
 `

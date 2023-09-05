@@ -11,10 +11,12 @@ export const Main = () => {
                     Finashin
                 </MainTitle>
                 <MainText>
-                    UX | UI designer <br/>
-                    24 years old, Minsk
+                    Frontend Developer<br/>
+                    23 years old, Minsk
                 </MainText>
-                <SwitchLanguage>RU | ENG</SwitchLanguage>
+                <SwitchLanguage>
+                    RU | ENG
+                </SwitchLanguage>
             </MainDescription>
             <MainImage src={main}/>
         </StyledMain>

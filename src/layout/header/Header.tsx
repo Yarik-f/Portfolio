@@ -7,8 +7,17 @@ export const Header = () => {
     return (
         <StyledHeader>
             <Menu menuItems={items}/>
+            <span></span>
         </StyledHeader>
     );
 };
 
-const StyledHeader = styled.header``
+const StyledHeader = styled.header`
+  span{
+    position: absolute;
+    content: '';
+    border: 1px solid #828282;
+    width: 940px;
+    left: 287px;
+  }
+`

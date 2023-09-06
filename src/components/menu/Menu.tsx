@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import {theme} from "../../styles/Theme";
+import React from "react";
 
-export const Menu = (props: {menuItems: Array<string>}) => {
+export const Menu = (props: { menuItems: Array<string> }) => {
     return (
         <StyledMenu>
             <ul>
@@ -9,7 +10,7 @@ export const Menu = (props: {menuItems: Array<string>}) => {
                 {props.menuItems.map((item, index) => {
                     return (
                         <li key={index}>
-                            <a href={'#'}>{item}</a>
+                            <a href={item}>{item}</a>
                         </li>
                     )
                 })}
@@ -21,27 +22,30 @@ export const Menu = (props: {menuItems: Array<string>}) => {
 
 
 const StyledMenu = styled.nav`
+  position: relative;
   ul {
-    position: relative;
+   
     display: flex;
     gap: 150px;
     justify-content: center;
     margin: 35px 0 30px 0;
   }
-  a{
+
+  a {
     font-size: 18px;
     color: ${theme.colors.fontText};
-    
-    &:hover{
+
+    &:hover {
       color: ${theme.colors.font};
     }
   }
-  
+
   span {
     position: absolute;
     content: '';
     border: 1px solid #828282;
-    width: 940px;
-    left: 287px;
+    width: 100%;
   }
+
+
 `

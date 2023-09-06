@@ -24,6 +24,7 @@ export const Contacts = () => {
 const StyledContacts = styled.section`
     ${Button} {
       margin-bottom: 45px;
+      transition: .2s ease-in-out;
     }
 `
 const ContactsText = styled.p`

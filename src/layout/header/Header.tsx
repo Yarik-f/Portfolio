@@ -9,11 +9,12 @@ export const Header = () => {
         <StyledHeader>
             <Container>
                 <Menu menuItems={items}/>
+
             </Container>
         </StyledHeader>
     );
 };
 
 const StyledHeader = styled.header`
- 
+  
 `

@@ -1,14 +1,18 @@
 import styled, {css} from "styled-components";
 import {theme} from "../../../styles/Theme";
+import {useState} from "react";
 
 export const MobileMenu = (props: { MenuItems: Array<string> }) => {
+    const [menuIsOpen, setMenuIsOpen] = useState(false)
+    const onBurgerBtnClick = () => {setMenuIsOpen(!menuIsOpen)}
+
     return (
 
         <StyledMobileMenu>
-            <BurgerButton isOpen={false}>
+            <BurgerButton isOpen={menuIsOpen} onClick={onBurgerBtnClick}>
                 <span></span>
             </BurgerButton>
-            <MobileMenuPopup isOpen={false}>
+            <MobileMenuPopup isOpen={menuIsOpen}>
                 <ul>
                     {props.MenuItems.map((item, index) => {
                         return (
@@ -41,19 +45,14 @@ const StyledMobileMenu = styled.nav`
 
   a {
     font-size: 18px;
-    color: ${theme.colors.fontText};
+    color: ${theme.colors.fontAnother};
+    
 
     &:hover {
       color: ${theme.colors.font};
     }
   }
-
-  span {
-    position: absolute;
-    content: '';
-    border: 1px solid #828282;
-    width: 100%;
-  }
+  
   `
 const BurgerButton = styled.button<{ isOpen: boolean }>`
   position: fixed;
@@ -114,7 +113,7 @@ const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
   right: 0;
   bottom: 0;
   z-index: 99999;
-  background-color: rgba(0, 128, 0, 0.15);
+  background-color: rgba(138, 138, 138, 0.49);
   display: none;
 
   ${props => props.isOpen && css<{ isOpen: boolean }>`
@@ -129,7 +128,8 @@ const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
     flex-direction: column;
     align-items: center;
   }
-  a{
+
+  a {
     text-align: center;
   }
 `

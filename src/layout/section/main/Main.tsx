@@ -1,33 +1,35 @@
 import React from 'react';
 import styled from "styled-components";
 import main from './../../../assets/images/main-photo.png'
+import {Container} from "../../../components/Container";
+import {FlexWrapper} from "../../../components/FlexWrapper";
 
 export const Main = () => {
     return (
         <StyledMain>
-            <MainDescription>
-                <MainTitle>
-                    Yaroslav
-                    Finashin
-                </MainTitle>
-                <MainText>
-                    Frontend Developer<br/>
-                    23 years old, Minsk
-                </MainText>
-                <SwitchLanguage>
-                    RU | ENG
-                </SwitchLanguage>
-            </MainDescription>
-            <MainImage src={main}/>
+            <Container>
+                <FlexWrapper direction={'column'} justify={'center'} align={'center'}>
+                    <MainDescription>
+                        <MainTitle>
+                            Yaroslav
+                            Finashin
+                        </MainTitle>
+                        <MainText>
+                            Frontend Developer<br/>
+                            23 years old, Minsk
+                        </MainText>
+                        <SwitchLanguage>
+                            RU | ENG
+                        </SwitchLanguage>
+                    </MainDescription>
+                    <MainImage src={main}/>
+                </FlexWrapper>
+            </Container>
         </StyledMain>
     );
 };
 
 const StyledMain = styled.section`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 `
 const MainDescription = styled.div`
   display: flex;

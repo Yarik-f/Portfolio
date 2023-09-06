@@ -4,7 +4,8 @@ export const theme = {
     colors: {
         font: '#070707',
         fontText: '#828282',
-        fontAnother: '#FFFFFF'
+        fontAnother: '#FFFFFF',
+        bg: '#F6F6F6'
     },
 
     media: {

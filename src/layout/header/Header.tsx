@@ -1,23 +1,19 @@
 import React from 'react';
 import styled from "styled-components";
-import {Menu} from "./Menu";
+import {Menu} from "../../components/menu/Menu";
+import {Container} from "../../components/Container";
 
 const items = ['Home', 'About me', 'Skills', 'Portfolio', 'Contacts']
 export const Header = () => {
     return (
         <StyledHeader>
-            <Menu menuItems={items}/>
-            <span></span>
+            <Container>
+                <Menu menuItems={items}/>
+            </Container>
         </StyledHeader>
     );
 };
 
 const StyledHeader = styled.header`
-  span{
-    position: absolute;
-    content: '';
-    border: 1px solid #828282;
-    width: 940px;
-    left: 287px;
-  }
+ 
 `

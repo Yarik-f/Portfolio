@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import {theme} from "../../styles/Theme";
 
-export const Menu = (props: {menuItems: Array<string>}) => {
+export const TabMenu = (props: {menuItems: Array<string>}) => {
     return (
         <StyledMenu>
             <ul>
@@ -22,13 +22,16 @@ export const Menu = (props: {menuItems: Array<string>}) => {
 const StyledMenu = styled.nav`
   ul {
     display: flex;
-    gap: 150px;
+    gap: 20px;
     justify-content: center;
-    margin: 35px 0 30px 0;
+    margin-bottom: 20px;
   }
   a{
     font-size: 18px;
+    line-height: 26px;
+    font-weight: bolder;
     color: ${theme.colors.fontText};
+    text-transform: uppercase;
     
     &:hover{
       color: ${theme.colors.font};

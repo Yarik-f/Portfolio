@@ -1,42 +1,38 @@
 import React from 'react';
 import styled from "styled-components";
+import {Container} from "../../../components/Container";
+import {FlexWrapper} from "../../../components/FlexWrapper";
+import {SectionTitle} from "../../../components/SectionTitle";
 
 export const About = () => {
     return (
         <StyledAbout>
-            <AboutTitle>About me</AboutTitle>
-            <AboutDescription>
-                <AboutText>
-                    Hi, I'm Yaroslav – Frontend Developer from Minsk.
-                    I'm interested in design and everything connected with it.
-                </AboutText>
-                <AboutText>
-                    I'm studying at courses "Frontend Developer" in IT-Incubator.
-                </AboutText>
-                <AboutText>
-                    Ready to implement excellent projects
-                    with wonderful people.
-                </AboutText>
-            </AboutDescription>
-
+            <Container>
+                <FlexWrapper direction={'column'} align={'center'}>
+                    <SectionTitle>About me</SectionTitle>
+                    <AboutDescription>
+                        <AboutText>
+                            Hi, I'm Yaroslav – Frontend Developer from Minsk.
+                            I'm interested in design and everything connected with it.
+                        </AboutText>
+                        <AboutText>
+                            I'm studying at courses "Frontend Developer" in IT-Incubator.
+                        </AboutText>
+                        <AboutText>
+                            Ready to implement excellent projects
+                            with wonderful people.
+                        </AboutText>
+                    </AboutDescription>
+                </FlexWrapper>
+            </Container>
         </StyledAbout>
     );
 };
 
 const StyledAbout = styled.section`
-  background-color: #F6F6F6;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 90px;
 `
 const AboutDescription = styled.section`
     padding-bottom: 105px;
-`
-const AboutTitle = styled.h2`
-  padding-top: 120px;
-  font-size: 32px;
-  margin-bottom: 17px;
 `
 const AboutText = styled.p`
   max-width: 485px;

@@ -13,9 +13,6 @@ type SkillPropsType = {
     max?: string
 }
 
-type Title = {
-    max?: string
-}
 export const Skill = (props: SkillPropsType) => {
     return (
         <StyledSkill>
@@ -25,7 +22,7 @@ export const Skill = (props: SkillPropsType) => {
                       height={props.height || "90"}
                       viewBox={props.viewBox || "0 0 90 90"}/>
             </div>
-            <SkillTitle max={props.max}>{props.title}</SkillTitle>
+            <SkillTitle>{props.title}</SkillTitle>
         </StyledSkill>
     );
 };
@@ -36,8 +33,7 @@ const StyledSkill = styled.li`
  align-items: center;
 
 `
-const SkillTitle = styled.p<Title>`
-  max-width: ${props => props.max || '90px'};
+const SkillTitle = styled.p`
   font-size: 12px;
   text-align: center;
   font-weight: bold;

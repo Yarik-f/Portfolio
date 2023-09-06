@@ -32,5 +32,8 @@ export const GlobalStyle = createGlobalStyle`
     background-color: unset;
     border: none;
   }
-
+  
+  section:nth-of-type(even){
+    background-color: ${theme.colors.bg};
+  }
 `

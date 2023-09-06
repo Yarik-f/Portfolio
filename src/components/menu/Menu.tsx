@@ -46,6 +46,9 @@ const StyledMenu = styled.nav`
     border: 1px solid #828282;
     width: 100%;
   }
-
+  
+  @media ${theme.media.tablet} {
+    display: none;
+  }
 
 `

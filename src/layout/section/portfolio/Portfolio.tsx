@@ -69,7 +69,7 @@ const PortfolioList = styled.ul`
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
-  margin-bottom: 45px;
+  margin-bottom: 70px;
 `
 const PortfolioItem = styled.li`
   display: flex;

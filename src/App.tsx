@@ -6,6 +6,7 @@ import {Skills} from "./layout/section/skills/Skills";
 import {Portfolio} from "./layout/section/portfolio/Portfolio";
 import {Contacts} from "./layout/section/contacts/Contacts";
 import {Footer} from "./layout/footer/Footer";
+import {GoTopBtn} from "./components/goTopBtn/GoTopBtn";
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
             <Portfolio/>
             <Contacts/>
             <Footer/>
+            <GoTopBtn/>
         </div>
     );
 }

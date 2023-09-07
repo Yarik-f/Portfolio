@@ -6,7 +6,7 @@ import {S} from './Main_Styles'
 
 export const Main: React.FC = () => {
     return (
-        <S.StyledMain>
+        <S.StyledMain id={'home'}>
             <Container>
                 <FlexWrapper direction={'column'} justify={'center'} align={'center'}>
                     <S.MainDescription>
@@ -19,9 +19,9 @@ export const Main: React.FC = () => {
                             23 years old, Minsk
                         </S.MainText>
                         <S.SwitchLanguage>
-                            <a href="#">RU </a>
+                            <a href="">RU </a>
                                 |
-                            <a href="#"> ENG</a>
+                            <a href=""> ENG</a>
                         </S.SwitchLanguage>
                     </S.MainDescription>
                     <S.MainImage src={main}/>

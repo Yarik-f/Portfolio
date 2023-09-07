@@ -7,20 +7,19 @@ import {Star} from "../../layout/section/skills/skill/star/Star";
 import './../../styles/slider.css';
 
 const responsive = {
-    0: { items: 1 },
-    568: { items: 2 },
-    1024: { items: 3 },
+    0: {items: 1},
+    568: {items: 2},
+    1024: {items: 3},
 };
 
 type SliderPropsType = {
     skillId: string
     skillTitle: string
     starId: string
-    starIdGray: string
+    starTwo: string
 }
-
-const Slide = (props: SliderPropsType) =>{
-    return(
+const Slide = (props: SliderPropsType) => {
+    return (
         <SliderItem>
             <Skill
                 iconId={props.skillId}
@@ -30,7 +29,7 @@ const Slide = (props: SliderPropsType) =>{
                 <Star iconId={props.starId}/>
                 <Star iconId={props.starId}/>
                 <Star iconId={props.starId}/>
-                <Star iconId={props.starIdGray}/>
+                <Star iconId={props.starTwo}/>
             </StarList>
         </SliderItem>
     );
@@ -41,54 +40,55 @@ const items = [
         skillId={'react'}
         skillTitle={'ReactJS'}
         starId={'star'}
-        starIdGray={'starTwo'}/>,
+        starTwo={'starTwo'}
+    />
+    ,
     <Slide
         skillId={'typescript'}
         skillTitle={'TypeScript'}
         starId={'star'}
-        starIdGray={'starTwo'}/>,
+        starTwo={'starTwo'}/>,
     <Slide
         skillId={'js'}
         skillTitle={'JavaScript'}
         starId={'star'}
-        starIdGray={'starTwo'}/>,
+        starTwo={'starTwo'}/>,
     <Slide
         skillId={'css'}
         skillTitle={'CSS'}
         starId={'star'}
-        starIdGray={'starTwo'}/>,
+        starTwo={'star'}/>,
     <Slide
         skillId={'html'}
         skillTitle={'HTML'}
         starId={'star'}
-        starIdGray={'starTwo'}/>,
+        starTwo={'starTwo'}/>,
     <Slide
         skillId={'figma'}
         skillTitle={'Figma'}
         starId={'star'}
-        starIdGray={'starTwo'}/>,
+        starTwo={'star'}/>,
     <Slide
         skillId={'git'}
         skillTitle={'GIT'}
         starId={'star'}
-        starIdGray={'starTwo'}/>,
+        starTwo={'starTwo'}/>,
     <Slide
         skillId={'styled'}
         skillTitle={'StyledComponents'}
         starId={'star'}
-        starIdGray={'starTwo'}/>,
+        starTwo={'star'}/>,
 ];
 
 export const Slider = () => (
     <StyledSlider>
-            <AliceCarousel
-                mouseTracking
-                items={items}
-                responsive={responsive}
-            />
+        <AliceCarousel
+            mouseTracking
+            items={items}
+            responsive={responsive}
+        />
     </StyledSlider>
 );
-
 
 
 const StyledSlider = styled.div`

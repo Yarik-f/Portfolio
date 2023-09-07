@@ -81,7 +81,7 @@ export const Portfolio: React.FC = () => {
 
 
     return (
-        <S.StyledPortfolio>
+        <S.StyledPortfolio id={'portfolio'}>
             <Container>
                 <FlexWrapper direction={'column'} align={'center'}>
                     <SectionTitle>Portfolio</SectionTitle>

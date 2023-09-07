@@ -8,7 +8,7 @@ import {S} from './Skills_Styles'
 
 export const Skills = () => {
     return (
-        <S.StyledSkills>
+        <S.StyledSkills id={'skills'}>
             <Container>
                 <FlexWrapper direction={'column'} align={'center'}>
                     <SectionTitle>Skills</SectionTitle>

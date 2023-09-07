@@ -6,7 +6,7 @@ import {S} from './About_Styles'
 
 export const About: React.FC = () => {
     return (
-        <S.StyledAbout>
+        <S.StyledAbout id={'about'}>
             <Container>
                 <FlexWrapper direction={'column'} align={'center'}>
                     <SectionTitle>About me</SectionTitle>

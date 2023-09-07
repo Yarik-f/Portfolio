@@ -1,13 +1,39 @@
 import React from "react";
 import {S} from './Menu_Styles'
 
-export const Menu: React.FC<{ menuItems: Array<string> }> = (props: { menuItems: Array<string> }) => {
+
+const items = [
+    {
+        title: 'Home',
+        href: 'home'
+    },
+    {
+        title: 'About me',
+        href: 'about'
+    },
+    {
+        title: 'Skills',
+        href: 'skills'
+    },
+    {
+        title: 'Portfolio',
+        href: 'portfolio'
+    },
+    {
+        title: 'Contacts',
+        href: 'contacts'
+    }
+]
+export const Menu: React.FC = () => {
     return (
         <S.MenuList>
-            {props.menuItems.map((item, index) => {
+            {items.map((item, index) => {
                 return (
                     <li key={index}>
-                        <a href={item}>{item}</a>
+                        <S.MenuLink
+                            to={item.href}
+                            smooth={true}
+                        >{item.title}</S.MenuLink>
                     </li>
                 )
             })}

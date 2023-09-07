@@ -1,35 +1,24 @@
 import React from 'react';
-import styled from "styled-components";
 import {Container} from "../../../components/Container";
 import {FlexWrapper} from "../../../components/FlexWrapper";
 import {SectionTitle} from "../../../components/SectionTitle";
 import {Button} from "../../../components/Button";
+import {S} from './Contacts_Styles'
 
-export const Contacts = () => {
+export const Contacts: React.FC = () => {
     return (
-        <StyledContacts>
+        <S.StyledContacts>
             <Container>
                 <FlexWrapper direction={'column'} align={'center'}>
                     <SectionTitle>Contacts</SectionTitle>
-                    <ContactsText>
+                    <S.ContactsText>
                         Want to know more or just chat?
                         You are welcome!
-                    </ContactsText>
+                    </S.ContactsText>
                     <Button>Send message</Button>
                 </FlexWrapper>
             </Container>
-        </StyledContacts>
+        </S.StyledContacts>
     );
 };
-const StyledContacts = styled.section`
-    ${Button} {
-      margin-bottom: 45px;
-      transition: .2s ease-in-out;
-    }
-`
-const ContactsText = styled.p`
-  font-size: 18px;
-  max-width: 300px;
-  margin-bottom: 30px;
-  text-align: center;
-`
+

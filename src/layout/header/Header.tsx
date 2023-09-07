@@ -1,20 +1,19 @@
 import React from 'react';
-import styled from "styled-components";
-import {Menu} from "../../components/menu/Menu";
 import {Container} from "../../components/Container";
 import {MobileMenu} from "./mobileMenu/MobileMenu";
+import {HeaderMenu} from "./headerMenu/HeaderMenu";
+import {S} from './Header_Styles'
 
 const items = ['Home', 'About me', 'Skills', 'Portfolio', 'Contacts']
-export const Header = () => {
+
+export const Header: React.FC = () => {
     return (
-        <StyledHeader>
+        <S.StyledHeader>
             <Container>
-                <Menu menuItems={items}/>
-                <MobileMenu MenuItems={items}/>
+                <HeaderMenu menuItems={items}/>
+                <MobileMenu menuItems={items}/>
             </Container>
-        </StyledHeader>
+        </S.StyledHeader>
     );
 };
 
-const StyledHeader = styled.header`
-`

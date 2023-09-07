@@ -7,7 +7,7 @@ type SkillPropsType = {
     iconId: string
 
 }
-export const Star = (props: SkillPropsType) => {
+export const Star: React.FC<SkillPropsType> = (props: SkillPropsType) => {
     return (
         <StyledStar>
             <Icon iconId={props.iconId}

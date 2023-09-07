@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import styled from "styled-components";
 import firstProj from './../../../assets/images/proj-1.png'
 import secondProj from './../../../assets/images/proj-2.png'
 import thirdProj from './../../../assets/images/proj-3.png'
@@ -9,6 +8,7 @@ import {SectionTitle} from "../../../components/SectionTitle";
 import {TabsMenu, StatusType} from "../../../components/tabsMenu/TabsMenu";
 import {Work} from "./work/Work";
 import {AnimatePresence, motion} from "framer-motion"
+import {S} from './Portfolio_Styles'
 
 const tabsItems: Array<{ title: string, status: StatusType }> = [
     {
@@ -60,7 +60,7 @@ const worksData = [
         id: 6
     }
 ]
-export const Portfolio = () => {
+export const Portfolio: React.FC = () => {
 
     const [currentFilterStatus, setCurrentFilterStatus] = useState('all')
     let filteredWorks = worksData
@@ -81,7 +81,7 @@ export const Portfolio = () => {
 
 
     return (
-        <StyledPortfolio>
+        <S.StyledPortfolio>
             <Container>
                 <FlexWrapper direction={'column'} align={'center'}>
                     <SectionTitle>Portfolio</SectionTitle>
@@ -89,7 +89,7 @@ export const Portfolio = () => {
                         tabsItems={tabsItems}
                         changeFilterStatus={changeFilterStatus}
                         currentFilterStatus={currentFilterStatus}/>
-                    <PortfolioItem>
+                    <S.PortfolioItem>
                         <AnimatePresence>
                             {filteredWorks.map(work => {
                                 return (
@@ -104,24 +104,13 @@ export const Portfolio = () => {
                                             src={work.src}
                                             key={work.id}/>
                                     </motion.div>
-
                                 )
                             })}
                         </AnimatePresence>
-                    </PortfolioItem>
-
+                    </S.PortfolioItem>
                 </FlexWrapper>
             </Container>
-        </StyledPortfolio>
+        </S.StyledPortfolio>
     );
 };
-const StyledPortfolio = styled.section`
-`
-const PortfolioItem = styled.ul`
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  margin-bottom: 70px;
-`
+

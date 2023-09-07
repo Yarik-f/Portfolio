@@ -1,51 +1,35 @@
 import React from 'react';
 import {Icon} from "../../components/icon/Icon";
-import styled from "styled-components";
-import {theme} from "../../styles/Theme";
 import {Container} from "../../components/Container";
 import {FlexWrapper} from "../../components/FlexWrapper";
+import {S} from './Footer_Styles'
 
-export const Footer = () => {
+export const Footer: React.FC = () => {
     return (
-        <StyledFooter>
+        <S.StyledFooter>
             <Container>
                 <FlexWrapper direction={'column'} align={'center'} justify={'center'}>
-                    <FooterList>
-                        <FooterItem>
+                    <S.FooterList>
+                        <S.FooterItem>
                             <Icon iconId={'linkedin'}/>
-                        </FooterItem>
-                        <FooterItem>
+                        </S.FooterItem>
+                        <S.FooterItem>
                             <Icon iconId={'instagram'}/>
-                        </FooterItem>
-                        <FooterItem>
+                        </S.FooterItem>
+                        <S.FooterItem>
                             <Icon iconId={'behance'}/>
-                        </FooterItem>
-                        <FooterItem>
+                        </S.FooterItem>
+                        <S.FooterItem>
                             <Icon iconId={'surface'}/>
-                        </FooterItem>
-                    </FooterList>
-                    <FooterText>
+                        </S.FooterItem>
+                    </S.FooterList>
+                    <S.FooterText>
                         Like me on <br/>
                         LinkedIn, Instagram, Behance, Dribble
-                    </FooterText>
+                    </S.FooterText>
                 </FlexWrapper>
             </Container>
-        </StyledFooter>
+        </S.StyledFooter>
     );
 };
-const StyledFooter = styled.footer`
-`
-const FooterList = styled.ul`
-  padding-top: 70px;
-  display: flex;
-  gap: 60px;
-  margin-bottom: 25px;
-`
-const FooterItem = styled.li``
-const FooterText = styled.p`
-  font-size: 14px;
-  color: ${theme.colors.fontText};
-  max-width: 280px;
-  text-align: center;
-  padding-bottom: 125px;
-`
+

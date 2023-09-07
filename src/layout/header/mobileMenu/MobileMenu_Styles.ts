@@ -5,25 +5,18 @@ const StyledMobileMenu = styled.nav`
   display: none;
   @media ${theme.media.tablet} {
     display: block;
-    margin-bottom: 40px;
   }
   `
 const BurgerButton = styled.button<{ isOpen: boolean }>`
-  position: fixed;
-  top: -110px;
-  right: -90px;
-  width: 200px;
-  height: 200px;
-  z-index: 999999999;
-
+  
   span {
     display: block;
     width: 36px;
     height: 2px;
     background-color: ${theme.colors.font};
-    position: absolute;
-    left: 40px;
-    bottom: 50px;
+    position: fixed;
+    right: 20px;
+    z-index: 999999999;
 
     ${props => props.isOpen && css<{ isOpen: boolean }>`
       background-color: rgba(255, 255, 255, 0);

@@ -4,7 +4,7 @@ import 'react-alice-carousel/lib/alice-carousel.css';
 import styled from "styled-components";
 import {Skill} from "../../layout/section/skills/skill/Skill";
 import {Star} from "../../layout/section/skills/skill/star/Star";
-import './../../styles/slider.css';
+import './slider.css';
 
 const responsive = {
     0: {items: 1},
@@ -107,5 +107,5 @@ const SliderItem = styled.div`
 
 const StarList = styled.ul`
   display: flex;
-  gap: 10px;
+  gap: 10px;    
 `

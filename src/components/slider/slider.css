@@ -1,5 +1,5 @@
 .alice-carousel__dots{
-    margin: 0;
+    margin-top: 80px;
 }
 .alice-carousel__dots-item:not(.__custom){
     display: inline-block;

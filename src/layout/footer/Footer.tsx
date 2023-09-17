@@ -11,16 +11,16 @@ export const Footer: React.FC = () => {
                 <FlexWrapper direction={'column'} align={'center'} justify={'center'}>
                     <S.FooterList>
                         <S.FooterItem>
-                            <Icon iconId={'linkedin'}/>
+                            <a href=""><Icon iconId={'linkedin'}/></a>
                         </S.FooterItem>
                         <S.FooterItem>
-                            <Icon iconId={'instagram'}/>
+                            <a href=""><Icon iconId={'instagram'}/></a>
                         </S.FooterItem>
                         <S.FooterItem>
-                            <Icon iconId={'behance'}/>
+                            <a href=""><Icon iconId={'behance'}/></a>
                         </S.FooterItem>
                         <S.FooterItem>
-                            <Icon iconId={'surface'}/>
+                            <a href=""><Icon iconId={'surface'}/></a>
                         </S.FooterItem>
                     </S.FooterList>
                     <S.FooterText>
